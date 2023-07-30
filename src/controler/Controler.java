@@ -16,4 +16,7 @@ public class Controler {
     public List<Student> getSortedStudentList(){
         return studentGroupService.getSortedStudentList();
     }
+    public List<Student> getSortedStudentListByFIO(){
+        return studentGroupService.getSortedStudentListByFIO();
+    }
 }

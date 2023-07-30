@@ -1,5 +1,6 @@
 package service;
 
+import comparator.StudentComparator;
 import module.Student;
 import module.StudentGroup;
 
@@ -26,6 +27,11 @@ public class StudentGroupService {
     public List<Student> getSortedStudentList(){
         List<Student> studentList = new ArrayList<>(studentGroup.getStudentList());
         Collections.sort(studentList);
+        return studentList;
+    }
+    public List<Student> getSortedStudentListByFIO(){
+        List<Student> studentList = new ArrayList<>(studentGroup.getStudentList());
+        studentList.sort(new StudentComparator());
         return studentList;
     }
 }
